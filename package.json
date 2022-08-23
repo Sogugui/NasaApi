@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sogugui/Nasa-Api.git"
+    "url": "git+https://github.com/Sogugui/NasaApi.git"
   },
-  "author": "",
+  "author": "Sofia Guardia",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Sogugui/Nasa-Api/issues"
   },
-  "homepage": "https://github.com/Sogugui/Nasa-Api#readme",
+  "homepage": "https://github.com/Sogugui/NasaApi#readme",
   "dependencies": {
     "database": "^0.0.2",
     "dotenv": "^16.0.1",

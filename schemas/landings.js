@@ -8,7 +8,7 @@ const landingsSchema = {
         unique: true
     },
     id: { 
-        type: String, 
+        type: Number, 
         required: true,
         unique: true 
     },
@@ -21,7 +21,7 @@ const landingsSchema = {
         required: true 
     },
     mass:{
-        type: String,
+        type: Number,
         required: true       
     },
     
@@ -34,19 +34,19 @@ const landingsSchema = {
         required: true 
     },
     reclat:{
-        type: String
+        type:Number
     },
     reclong:{
-        type: String
+        type: Number
     },
     geolocation:{
         type: Object,
         latitude:{
-            type:String,
+            type:Number,
             required: true
         },
         longitude:{
-            type:String,
+            type:Number,
             required: true
         }
     }
