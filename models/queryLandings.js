@@ -109,7 +109,7 @@ const updateLanding= async(updateLanding)=>{
     catch(err){console.log(err);}
 }
 
-///////////////////DELETE/////////////////////
+///////////////////DELETE///////////////////////
 const dropLandings= async(deleteLanding)=> {
 
     try{

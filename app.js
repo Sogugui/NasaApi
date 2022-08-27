@@ -1,9 +1,11 @@
 const express = require('express')
 require('./utils/dbMongo.js');
-//Rutas de productos
-// const productsRoutes= require("./routes/productsRoutes");
+//Rutas de la Api
+
  const landingsApiRoutes = require('./routes/landingsApiRoutes');
-// const entriesApiRoutes= require("./routes/entriesApiRoutes");
+ const neasApiRoutes= require('./routes/neasApiRoutes')
+
+
 
 
 
@@ -29,6 +31,8 @@ app.use(express.json());
 
 
 app.use("/api/astronomy",landingsApiRoutes)
+app.use("/api/astronomy",neasApiRoutes)
+
 
 
 
