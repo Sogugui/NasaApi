@@ -7,7 +7,7 @@ const neasApiController= require("../controllers/neasApiController");
 const neasApiRouter= express.Router();
 
 neasApiRouter.get("/neas",neasApiController.getNeas)
-// neasApiRouter.post("/create",neasApiController.postneas)
+neasApiRouter.post("/neas/create",neasApiController.postNeas)
 // neasApiRouter.put("/edit",neasApiController.putneas)
 // neasApiRouter.delete("/delete",neasApiController.dropneas)
 
