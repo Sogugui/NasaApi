@@ -8,8 +8,8 @@ const neasApiRouter= express.Router();
 
 neasApiRouter.get("/neas",neasApiController.getNeas)
 neasApiRouter.post("/neas/create",neasApiController.postNeas)
-// neasApiRouter.put("/edit",neasApiController.putneas)
-// neasApiRouter.delete("/delete",neasApiController.dropneas)
+neasApiRouter.put("/neas/edit",neasApiController.putNeas)
+// neasApiRouter.delete("/neas/delete",neasApiController.dropNeas)
 
 
 

@@ -69,7 +69,21 @@ const postNeas = async (req, res) => {
         res.status(404).json({ "message": "Nea not created" });
     }
 }
+
+const putNeas= async (req, res) => {
+    try {
+        let editNea =  await Neas.updateNea(req.body);// lo que esta entre comillas es para filtrar lo que quiero que me muestre
+        res.status(200).json(editNea);
+        console.log("Nea modificado con exito", req.body);
+     
+    }
+    catch (error) {
+        console.log(`ERROR: ${error.stack}`);
+        res.status(404).json( {"message":"Nea no modificado"});
+    } 
+}
 module.exports={
     getNeas,
     postNeas,
+    putNeas
 }

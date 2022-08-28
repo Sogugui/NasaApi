@@ -63,6 +63,33 @@ const createNeas= async(newNea)=> {
     catch(err){console.log(err);}
 }
 
+const updateNea= async(updateNea)=>{
+    try{
+        const updateNea= {
+            "designation": Nea.designation,
+            "discovery_date": Nea.discovery_date,
+            "h_mag": Nea.h_mag,
+            "moid_au": Nea.moid_au,
+            "q_au_1": Nea.q_au_1,
+            "q_au_2": Nea.q_au_2,
+            "period_yr": Nea.period_yr,
+            "i_deg": Nea.i_deg,
+            "pha": Nea.pha,
+            "orbit_class": Nea.orbit_class
+          }
+        const oldNea= await Nea.findByIdAndUpdate({designation:Nea.designation},updateNea)
+        oldNea.overwrite(updateNea)//Se sobreescribe el viejo por el nuevo
+        console.log("Este es el Nea viejo despues de ser actualizado",oldNea);
+        await oldNea.save()//se guarda en la bbdd
+        return{
+            oldNea
+        }
+        }
+    
+    catch(err){console.log(err);}
+}
+
+
 module.exports ={
     getAllNeas,
     getOrbit,
@@ -70,5 +97,6 @@ module.exports ={
     getYearTo,
     getYear,
     getDate,
-    createNeas
+    createNeas,
+    updateNea
 }
